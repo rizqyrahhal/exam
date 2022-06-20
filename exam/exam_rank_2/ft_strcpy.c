@@ -2,19 +2,28 @@
  #include <string.h>
  #include <stdio.h>
 
-// char    *ft_strcpy(char *s1, char *s2)
-// {
+char    *ft_strcpy(char *s1, char *s2)
+{
+    int i;
 
-// }
+    i = 0;
+    while(s2[i])
+    {
+        s1[i] = s2[i];
+        i++;
+    }
+    s1[i] = '\0';
+    return(s1);
+}
 
 int main(void)
 {
-    char str1[20];
-    char str2[10];
+    char str1[40];
+    char *str2;
+    char *str3;
     
-    *str1 = "rahhal ";
-    *str2 = "rizqy\n";
+    str2 = "rizqy\n";
 
-    strcpy(str1, str2);
-    printf("%s", str2);
+    str3 = ft_strcpy(str1, str2);
+    printf("%s", str3);
 }
